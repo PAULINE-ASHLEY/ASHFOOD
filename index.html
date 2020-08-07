@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ASH FOOD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+nav{
+  background: white;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: brown;
+  font-size: 33px;
+  line-height: 80px;
+  padding: 0 140px;
+  font-weight: 600;
+  font-family: 'quicksand', sans-serif;
+}
+nav ul{
+  float: right;
+  margin-right: 60px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 2px;
+}
+nav ul li a{
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-family: 'quicksand', sans-serif;
+}
+a.active,a:hover{
+  background: brown;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 13px;
+    padding-left: 25px;
+  }
+  nav ul li a{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+    margin-right: 40px;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 12px;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+html{
+  font-family: 'quicksand', sans-serif;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa-facebook {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-youtube {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-twitter {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-instagram {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-snapchat-ghost {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+a{
+  color: black;
+  font-weight: bolder;
+}
+button{
+  background-color: red;
+  width: 260px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.pagination a:hover:not(.active) {
+  background-color:brown;
+}
+.contact{
+  background-color:white;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 5px 10px #888888;
+  width:220px;
+}
+input{
+width: 200px;
+text-align: center;
+background: transparent;
+border: none;
+border-bottom: 1px solid black;
+font-size: 16px;
+font-weight: 200px;
+padding: 10px 0;
+transition: border 0.5s;
+outline: none;
+color: black;
+}
+input[type=submit]{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input[type=submit]:hover{
+color: white;
+background-color:brown;
+}
+.desc{
+padding: 15px;
+text-align: center;
+color: black;
+font-size: 16px;
+font-weight: bolder;
+background-color: cornsilk;
+opacity: 0.9;
+}
+    </style>
+  </head>
+  <body>
+
+    </script>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">
+        ASH FOOD
+      </label>
+      <ul>
+<li><a href="index.html">Menu</a></li>
+<li><a href="#food">Food</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<div class="container">
+  <img src="images/food.jpg" alt="food" style="max-width:100%;height:auto;">
+  <div class="centered">
+    <h1 style="font-size:3.5vw;color:brown;font-weight:bolder"> COME TO ASH FOOD </h1><br>
+    <p style="font-size:3vw;font-weight:bolder">Food like no other. We serve the best.</p><br>
+  </div>
+</div>
+
+
+<p id="about" style="font-size:30px;font-weight:bolder;text-align:center;padding-top:60px;text-decoration:underline">ABOUT</p><br>
+<p style="color:brown;font-size:14px;text-align:center">A platform for ordering food.Ash food gives you something
+  that you can be able to view all the food items and order.it is delivered to your door step.</P>
+<br><br><br><br><hr>
+
+
+
+
+<div style="padding-top:60px" class="row">
+  <p id="food" style="font-size:30px;font-weight:bolder;text-align:center;text-decoration:underline">FOOD AND DRINKS</p><br>
+<div  class="col-3 col-s-3 menu">
+<img src="images/burger.jpg" alt="burger" style="max-width:100%;height:auto;">
+<div class="desc">
+BURGER<br>
+KSH 200<br>
+
+</div>
+
+<img src="images/fish.jpg" alt="fish" style="max-width:100%;height:auto;">
+<div class="desc">
+FRIED FISH<br>
+KSH 500<br>
+
+</div>
+
+<img src="images/salad.jpg" alt="salad" style="max-width:100%;height:auto;">
+<div class="desc">
+CHICKEN SALAD<br>
+KSH 600<br>
+
+</div>
+
+<img src="images/mokimo.jpg" alt="mokimo" style="max-width:100%;height:auto;">
+<div class="desc">
+MOKIMO<br>
+KSH 250<br>
+
+</div>
+
+<img src="images/eggs.jpg" alt="eggs" style="max-width:100%;height:auto;">
+<div class="desc">
+EGGS<br>
+KSH 80<br>
+
+</div>
+
+<img src="images/wine.jpg" alt="wine" style="max-width:100%;height:auto;">
+<div class="desc">
+WINE<br>
+KSH 400 PER GLASS<br>
+
+</div>
+
+</div>
+<div  class="col-3 col-s-6 menu">
+<img src="images/sandwitch.jpg" alt="sandwitch" style="max-width:100%;height:auto;">
+<div class="desc">
+SANDWITCH<br>
+KSH 300<br>
+
+</div>
+
+<img src="images/steak.jpg" alt="steak" style="max-width:100%;height:auto;">
+<div class="desc">
+STEAK<br>
+KSH 700<br>
+
+</div>
+
+<img src="images/hotdog.jpg" alt="hotdog" style="max-width:100%;height:auto;">
+<div class="desc">
+HOTDOG<br>
+KSH 150<br>
+
+</div>
+
+<img src="images/masala.jpg" alt="masala" style="max-width:100%;height:auto;">
+<div class="desc">
+CHIPS MASALA<br>
+KSH 200<br>
+
+</div>
+
+<img src="images/sausage.jpg" alt="sausage" style="max-width:100%;height:auto;">
+<div class="desc">
+SAUSAGE<br>
+KSH 80<br>
+
+</div>
+
+<img src="images/water.jpg" alt="water" style="max-width:100%;height:auto;">
+<div class="desc">
+WATER<br>
+KSH 100<br>
+
+</div>
+
+</div>
+<div  class="col-3 col-s-9 menu">
+<img src="images/chicken.jpg" alt="chicken" style="max-width:100%;height:auto;">
+<div class="desc">
+FRIED CHICKEN<br>
+KSH 400<br>
+
+</div>
+
+<img src="images/pilau.jpg" alt="pilau" style="max-width:100%;height:auto;">
+<div class="desc">
+PILAU AND MEAT<br>
+KSH 200<br>
+
+</div>
+
+<img src="images/ugali.jpg" alt="ugali" style="max-width:100%;height:auto;">
+<div class="desc">
+UGALI AND MEAT<br>
+KSH 300<br>
+
+</div>
+
+<img src="images/samosa.jpg" alt="samosa" style="max-width:100%;height:auto;">
+<div class="desc">
+SAMOSA<br>
+KSH 80<br>
+
+</div>
+
+<img src="images/shawarma.jpg" alt="shawarma" style="max-width:100%;height:auto;">
+<div class="desc">
+SHAWARMA<br>
+KSH 250<br>
+
+</div>
+
+<img src="images/juice.jpg" alt="juice" style="max-width:100%;height:auto;">
+<div class="desc">
+JUICE<br>
+KSH 200<br>
+
+</div>
+
+</div>
+<div  class="col-3 col-s-12 menu">
+<img src="images/meatballs.jpg" alt="meatballs" style="max-width:100%;height:auto;">
+<div class="desc">
+SPAGHETTI AND MEATBALLS<br>
+KSH 300<br>
+
+</div>
+
+<img src="images/fries.jpg" alt="fries" style="max-width:100%;height:auto;">
+<div class="desc">
+PLAIN CHIPS<br>
+KSH 150<br>
+
+</div>
+
+<img src="images/beans.jpg" alt="beans" style="max-width:100%;height:auto;">
+<div class="desc">
+RICE AND BEANS<br>
+KSH 250<br>
+
+</div>
+
+<img src="images/bacon.jpg" alt="bacon" style="max-width:100%;height:auto;">
+<div class="desc">
+BACON<br>
+KSH 100<br>
+
+</div>
+
+<img src="images/pizza.jpg" alt="pizza" style="max-width:100%;height:auto;">
+<div class="desc">
+PIZZA<br>
+KSH 700<br>
+
+</div>
+
+<img src="images/fudge.jpg" alt="fudge" style="max-width:100%;height:auto;">
+<div class="desc">
+CHOCOLATE FUDGE<br>
+KSH 700<br>
+
+</div>
+
+</div>
+</div>
+
+<div style="padding-top:60px" class="row">
+<div  class="col-4 col-s-4 menu">
+</div>
+<div  class="col-4 col-s-8 menu">
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+</div>
+<div  class="col-4 col-s-12 menu">
+</div>
+</div><br><br><br><br>
+<hr>
+
+
+
+<div style="background-color:white;" class="row">
+<div  class="col-4 col-s-4 menu">
+</div>
+<div  class="col-4 col-s-8 menu">
+  <p id="contact" style="font-size:30px;font-weight:bolder;padding-top:60px;text-decoration:underline">ORDER FOOD NOW</p><br>
+  <div class="contact">
+  <form action="PHP/contact.php" target="_blank" method="post" autocomplete="on"> <!--displaying the contact us part for the form-->
+  <div >
+  <h2 style="text-align:center;color:brown;text-decoration:underline">ORDER NOW</h2> <!--displaying the contact us part-->
+</div><br>
+  <input type="text" name="name" placeholder="name"required> <br><br>
+  <input type="tel" name="phone" placeholder="telephone"required> <br> <br>
+  <input type="text" name="location" placeholder="location"required> <br><br>
+  <input type="text" name="food" placeholder="food"required> <br><br>
+    <input type="text" name="drink" placeholder="drink"required> <br><br>
+  <input type="number" id="quantity" name="quantity"  placeholder="quantity" min="1" max="100" required><br><br>
+  <input type="Submit" value="Submit" ><br><br>
+  </form>
+  </div>
+</div>
+<div  class="col-4 col-s-12 menu">
+<p style="padding-top:200px;font-size:30px;font-weight:bolder;text-decoration:underline">DELIVERY NUMBER</p><br>
+<p>You can contact us at 07******** if you want quick delivery.</p>
+</div>
+
+</div>
+
+
+
+
+
+<div style="padding-top:100px" class="row" >
+  <div style="background-color: cornsilk;height:500px;" class="col-3 col-s-3 menu">
+    <h2 style="color:black;text-align:center;text-decoration:overline">SOCIAL MEDIA</h2>
+  <p style="text-align:left;color:black;font-size:12px;font-weight:bolder"><a target="_blank" href="#" style="background-color:cornsilk" class="fa fa-facebook"></a>
+    Facebook-AshFood</p>
+    <p style="text-align:left;color:black;font-size:12px;font-weight:bolder"><a target="_blank" href="#" style="background-color:cornsilk" class="fa fa-youtube"></a>
+      Youtube-AshFood</p>
+      <p style="text-align:left;color:black;font-size:12px;font-weight:bolder"><a target="_blank" href="#" style="background-color:cornsilk" class="fa fa-twitter"></a>
+        Twitter-@AshFood001</p>
+        <p style="text-align:left;color:black;font-size:12px;font-weight:bolder"><a target="_blank" href="#" style="background-color:cornsilk" class="fa fa-instagram"></a>
+          Instagram-ASH_Food</p>
+          <p style="text-align:left;color:black;font-size:12px;font-weight:bolder"><a target="_blank" href="#" style="background-color:cornsilk" class="fa fa-snapchat-ghost"></a>
+            Snapchat-ASH-Food</p><br>
+    <i class='fas fa-envelope' style="font-size:14px;color:black;margin-left:20px;font-weight:bolder">&nbsp;&nbsp;ashfood@gmail.com</i><br><br>
+
+  </div>
+
+  <div style="background-color:cornsilk;height:500px;" class="col-3 col-s-6">
+<h2 style="color:black;text-align:center;text-decoration:overline;font-weight:bolder">NAVIGATION BAR</h2>
+<p style="padding-top:40px;font-size:14px;text-align:center;font-weight:bolder"><a href="index.html">MENU</a></p>
+<p style="padding-top:40px;font-size:14px;text-align:center;font-weight:bolder"><a href="#food">FOOD</a></p>
+<p style="padding-top:40px;font-size:14px;text-align:center;font-weight:bolder"><a href="#about">ABOUT</a></p>
+<p style="padding-top:40px;font-size:14px;text-align:center;font-weight:bolder"><a href="#contact">CONTACT</a></p>
+
+  </div>
+
+  <div style="background-color:cornsilk;height:500px;" class="col-3 col-s-9">
+  <h2 style="color:black;text-align:center;text-decoration:overline;font-weight:bolder">ABOUT</h2><br>
+<p style="color:black;font-size:14px;font-weight:bolder">A platform for ordering food.Ash food gives you something
+  that you can be able to view all the food items and order.it is delivered to your door step.</P>
+    </div>
+
+    <div style="background-color:cornsilk;height:500px;" class="col-3 col-s-12">
+<p style="background-color:cornsilk;color:black;text-align: center;font-size: 14px;
+padding: 15px;font-weight:bolder"> &copy; 2020 All Rights Reserved. Developed & Designed by PAULINE ONDIEK. </p>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
